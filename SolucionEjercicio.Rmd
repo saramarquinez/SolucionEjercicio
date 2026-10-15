@@ -393,3 +393,14 @@ rownames(Animals2)
 colnames(Animals2)
 ```
 
+
+## Apartado d
+```{r}
+commonAnimals <- intersect(
+    rownames(mammals),
+    rownames(Animals2)
+)
+
+commonAnimals
+```
+
