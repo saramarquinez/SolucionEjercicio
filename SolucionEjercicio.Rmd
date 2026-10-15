@@ -351,3 +351,15 @@ Compila el proyecto como **pdf** y como **html** y observa el fichero obtenido. 
 
 
 ```
+
+# Tarea 2
+
+## 1.1 Apartado a
+
+```{r}
+library(MASS)
+library(robustbase)
+
+?mammals
+?Animals2
+```
