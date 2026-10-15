@@ -354,7 +354,7 @@ Compila el proyecto como **pdf** y como **html** y observa el fichero obtenido. 
 
 # Tarea 2
 
-## 1.1 Apartado a
+## Apartado a
 
 ```{r}
 library(MASS)
@@ -363,3 +363,22 @@ library(robustbase)
 ?mammals
 ?Animals2
 ```
+
+
+## Apartado b
+
+```{r}
+library(MASS)
+library(robustbase)
+
+dim(mammals)
+head(mammals)
+tail(mammals)
+str(mammals)
+
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+str(Animals2)
+```
+
