@@ -1,6 +1,6 @@
 ---
-title: "Pon un título a tu documento"
-author: "Pon aquí tu nombre y apellidos"
+title: "Solución Ejercicio 2"
+author: "Sara Marquínez Díaz"
 date: "`r Sys.Date()`"
 output:
   bookdown::pdf_document2:
@@ -78,22 +78,21 @@ En este ejemplo, por defecto se generará una salida html, que es la que está d
 
 **output:** Salida(s) generadas
 
-[*Salida pdf*]{.ul}*. Si se incluye código en LaTeX necesitarás tener instalado un compilador de Latex*\
+[*Salida pdf*]{.underline}*. Si se incluye código en LaTeX necesitarás tener instalado un compilador de Latex*\
 
 **pdf_document**:\
 **toc**: yes Tabla de contenido (índice)\
-**toc_depth**: 3 Número de niveles de la tabla de contenido (índice) \# 1, \#\#2,\#\#\#3\
+**toc_depth**: 3 Número de niveles de la tabla de contenido (índice) \# 1, ##2,###3\
 **number_sections**: yes Numeración de las secciones
 
-[Salida html_document]{.ul}:\
+[Salida html_document]{.underline}:\
 **echo**: yes **number_sections**: yes\
 **theme**: lumen Aspecto y estilo. Otras opciones: *cerulean, journal, flatly, darkly, readable, spacelab, united, cosmo, lumen, paper, sandstone, simplex, and yeti*\
 **toc**: yes
 
-[*Salida html_notebook*]{.ul}*, como html, pero con algunas opciones de visualización*
+[*Salida html_notebook*]{.underline}*, como html, pero con algunas opciones de visualización*
 
-**bookdown::html_document2:** Versión enriquecida de html que permite numerar figuras, referenciar, etc. https://bookdown.org/yihui/bookdown/
-**bookdown::pdf_document2:** Versión enriquecida de pdf que permite numerar figuras, referenciar, etc.
+**bookdown::html_document2:** Versión enriquecida de html que permite numerar figuras, referenciar, etc. <https://bookdown.org/yihui/bookdown/> **bookdown::pdf_document2:** Versión enriquecida de pdf que permite numerar figuras, referenciar, etc.
 
 Las opciones siguientes nos permiten traducir estas etiquetas para que aparezcan en otro idioma en caso de que se usen en el documento para referenciar a figuras, tablas, etc.
 
@@ -161,15 +160,14 @@ Especificar las librerías necesarias para ejecutar el código en la variable **
 
 El siguiente bloque, al no especificar opciones del *chunk* usa la configuración por defecto.
 
-```
+```         
 # Asegúrate que el paquete "pacman" está instalado
 if (!require("pacman")) install.packages("pacman")
-
 ```
 
 Utilizaremos la librería `pacman` (package manager) para gestionar la instalación de librerías. Es necesario que dicha librería esté instalada previamente.
 
-https://epirhandbook.com/es/suggested-packages-1.html
+<https://epirhandbook.com/es/suggested-packages-1.html>
 
 ```{r, message=FALSE}
 # Asegúrate que el paquete "pacman" está instalado
@@ -179,13 +177,12 @@ if (!require("pacman")) install.packages("pacman")
 
 Utilizamos la función `p_load` para la carga e instalación de paquetes
 
-```
+```         
 pacman::p_load(
      bookdown,
      rio      # importación/exportación de múltiples tipos de datos
      )
 ```
- 
 
 ```{r,results=FALSE}
 
@@ -283,7 +280,7 @@ pacman::p_load(
 
 # Trabaja con proyectos.
 
-https://epirhandbook.com/es/r-projects.html
+<https://epirhandbook.com/es/r-projects.html>
 
 Para cada tarea crea un nuevo proyecto con, al menos, una carpeta *./data*, que contenga los datos (puedes usar carpetas adicionales para organizar la información **./program, /figuras**, etc). (La carpeta donde se encuentra este fichero es un proyecto)
 
@@ -293,7 +290,7 @@ Haz un breve introducción indicando el contenido del documento:
 
 " El objetivo de esta *tarea/trabajo/práctica* es ... bla bla bla "
 
-## Subapartado (nivel 2 \#\#). Rutas locales
+## Subapartado (nivel 2 \##). Rutas locales
 
 Usa rutas referidas a la carpeta en la que se encuentra el fichero fuente, y siempre rutas **relativas** a dicha ubicación. Ejemplos
 
@@ -307,18 +304,19 @@ Usa rutas referidas a la carpeta en la que se encuentra el fichero fuente, y sie
 
 **ruta4\<-'../../data/tabla1.txt'** : el fichero está en la carpeta datos que cuelga de dos niveles superiores
 
-
 <font color=red size=4>ruta5\<-'C:/MisDatos/Ej.txt' </font> **NO USAR NUNCA UNA RUTA ABSOLUTA COMO ESTA**
 
-### Subsubapartado  (nivel 3 \#\#\#). Cómo incluir figuras
+### Subsubapartado (nivel 3 \###). Cómo incluir figuras
 
 Podemos especificar parámetros de tamaño y ubicación en el *chunk*
 
 <!-- ```{r rmarkdown, echo=FALSE,include=FALSE, out.width='30%', fig.align='center', fig.cap='Logo ETSE (desde archivo PNG).'} -->
+
 <!-- knitr::include_graphics("figure/logoETSE.png") -->
+
 <!-- ``` -->
 
-### Subsubapartado (nivel 3 \#\#\#). 
+### Subsubapartado (nivel 3 \###).
 
 En este caso visualizamos el código. Observa como podemos incluir una figura y también ponerle un título
 
@@ -326,14 +324,13 @@ En este caso visualizamos el código. Observa como podemos incluir una figura y 
 knitr::include_graphics("figure/logoEtse.png")
 ```
 
-
 # Inclusión de ecuaciones
 
 Puedes incluir expresiones matemáticas usando la nomenclatura LaTeX por ejemplo:
 
 $ax^2+bx+c=0$
 
-### Subsubapartado (nivel 3 \#\#\#). 
+### Subsubapartado (nivel 3 \###).
 
 Podemos referirnos a una figura haciendo referencia al nombre del chunk `\@ref(fig:chunk-name))`
 
@@ -354,4 +351,3 @@ Compila el proyecto como **pdf** y como **html** y observa el fichero obtenido. 
 
 
 ```
-
