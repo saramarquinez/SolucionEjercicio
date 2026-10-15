@@ -418,3 +418,16 @@ no_comunes_2
 cat('total de animales no comunes:', length(no_comunes_1)+length(no_comunes_2))
 ```
 
+## Apartado f
+```{r}
+
+dif1 <- setdiff(rownames(mammals), rownames(Animals2))
+dif2 <- setdiff(rownames(Animals2), rownames(mammals))
+
+diferencia <- union(dif1, dif2)
+
+diferencia
+length(diferencia)
+
+```
+
